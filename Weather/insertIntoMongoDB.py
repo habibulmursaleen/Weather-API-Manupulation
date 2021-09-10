@@ -40,10 +40,6 @@ with open('retailers.csv', newline='') as csvfile:
 
             my_list = []
 
-            # myciting={"_id" : str(uuid.uuid1()),
-            #           "cityName" : row["Egg"],
-            #           "lat" : row["food"],"gg":"hhh","tmp":[]}
-
             for x in range(0, 5):
                 next = base + timedelta(days=x)
                 next = next.strftime("%Y-%m-%d")
@@ -73,8 +69,6 @@ with open('retailers.csv', newline='') as csvfile:
                     except:
                         description_12 = "no found"
 
-                    # d = json.loads(item['data']['instant'])
-                    # item1={"tempra":temperature,"ddd":}
                     print(item)
                     x = dbname.insert_one(item)
 
@@ -95,7 +89,5 @@ with open('retailers.csv', newline='') as csvfile:
                     print("Description: ", description_6)
 
                     print("---------After 12 Hours-------")
-                    print("Description: ", description_12)
-
-        # dbna,e.insert(mycity)
-
+                    print("Description: ", description_12) 
+                    
